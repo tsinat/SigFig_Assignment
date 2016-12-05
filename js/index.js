@@ -33,8 +33,8 @@ import data from './data';
 
     const addListener = (item) => {
         item.addEventListener('dragstart', handleDragStart);
-        item.addEventListener('dragover', handleDragOver);
         item.addEventListener('drop', handleDrop);
+        item.addEventListener('dragover', handleDragOver);
         item.addEventListener('dragend', handleDragEnd);
     }
 
@@ -46,8 +46,7 @@ import data from './data';
 
     let dragSrcEl = null;
     function handleDragStart(e) {
-        this.style.opacity = '0.4';
-
+        
         dragSrcEl = this;
 
         e.dataTransfer.effectAllowed = 'move';
@@ -60,6 +59,7 @@ import data from './data';
         }
 
         e.dataTransfer.dropEffect = 'move';
+
         return false;
     }
 
@@ -79,7 +79,7 @@ import data from './data';
 
     function handleDragEnd(e) {
         draggableDiv.forEach((item) => {
-            item.classList.remove('over');
+            // item.classList.remove('over');
         });
     }
 })();
