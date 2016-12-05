@@ -1,14 +1,14 @@
 const data = {
     images: [
-        {"url": "http://cdn.skilledup.com/wp-content/uploads/2014/11/graphic-design-tools-Feature_1290x688_MS.jpg"},
-        {"url": "https://content-static.upwork.com/blog/uploads/sites/4/2014/03/web-development-cropped.jpg"},
-        {"url": "https://content-static.upwork.com/blog/uploads/sites/4/2014/03/web-development-cropped.jpg"},
-        {"url": "http://mliesl.edu/images/IMG_1464.jpg"},
-        {"url": "http://cdn.skilledup.com/wp-content/uploads/2014/11/graphic-design-tools-Feature_1290x688_MS.jpg"},
-        {"url": "https://content-static.upwork.com/blog/uploads/sites/4/2014/03/web-development-cropped.jpg"},
-        {"url": "http://mliesl.edu/images/IMG_1464.jpg"},
-        {"url": "https://www.ccny.cuny.edu/sites/default/files/styles/top_slider/public/cintbanner.jpg"},
-        {"url": "https://www.ccny.cuny.edu/sites/default/files/styles/top_slider/public/cintbanner.jpg"}
+        {"url": "./images/1.png"},
+        {"url": "./images/2.png"},
+        {"url": "./images/3.png"},
+        {"url": "./images/4.png"},
+        {"url": "./images/5.png"},
+        {"url": "./images/6.png"},
+        {"url": "./images/7.png"},
+        {"url": "./images/8.png"},
+        {"url": "./images/9.png"},
     ]
 };
 
