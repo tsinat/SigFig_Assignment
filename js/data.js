@@ -1,5 +1,4 @@
-const data = {
-    images: [
+const data = [
         {"url": "./images/1.png"},
         {"url": "./images/2.png"},
         {"url": "./images/3.png"},
@@ -9,7 +8,6 @@ const data = {
         {"url": "./images/7.png"},
         {"url": "./images/8.png"},
         {"url": "./images/9.png"},
-    ]
-};
+    ];
 
 export default data;

@@ -6,7 +6,7 @@ import data from './data';
     const root = document.getElementById('app');
 
     //dynamically creates the div of images from the json data
-    const images = data.images.map((image, index) => {
+    const images = data.map((image, index) => {
         const myDiv = document.createElement('div');
         myDiv.className = "item";
         myDiv.classList.add("col-xs-3");
