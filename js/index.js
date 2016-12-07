@@ -1,4 +1,4 @@
- 8                                                                                                                                              88888876import data from './data';
+import data from './data';
 
 (function() {
     'use strict';
