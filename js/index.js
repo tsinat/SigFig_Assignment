@@ -1,9 +1,11 @@
-import data from './data';
+ 8                                                                                                                                              88888876import data from './data';
 
 (function() {
     'use strict';
 
     const root = document.getElementById('app');
+
+    //dynamically creates the div of images from the json data
     const images = data.images.map((image, index) => {
         const myDiv = document.createElement('div');
         myDiv.className = "item";
@@ -35,7 +37,6 @@ import data from './data';
         item.addEventListener('dragstart', handleDragStart);
         item.addEventListener('drop', handleDrop);
         item.addEventListener('dragover', handleDragOver);
-        item.addEventListener('dragend', handleDragEnd);
     }
 
     const draggableDiv = document.querySelectorAll('.item');
@@ -45,10 +46,9 @@ import data from './data';
     });
 
     let dragSrcEl = null;
-    function handleDragStart(e) {
-        
-        dragSrcEl = this;
 
+    function handleDragStart(e) {
+        dragSrcEl = this;
         e.dataTransfer.effectAllowed = 'move';
         e.dataTransfer.setData('text/html', this.innerHTML);
     }
@@ -57,9 +57,7 @@ import data from './data';
         if (e.preventDefault) {
             e.preventDefault();
         }
-
         e.dataTransfer.dropEffect = 'move';
-
         return false;
     }
 
@@ -67,7 +65,7 @@ import data from './data';
         if (e.stopPropagation) {
             e.stopPropagation();
         }
-        // Don't do anything if dropping the same column we're dragging.
+        // checks if we are dropping from the location we draged
         if (dragSrcEl != this) {
             // Set the source column's HTML to the HTML of the column we dropped on.
             dragSrcEl.innerHTML = this.innerHTML;
@@ -75,11 +73,5 @@ import data from './data';
         }
 
         return false;
-    }
-
-    function handleDragEnd(e) {
-        draggableDiv.forEach((item) => {
-            // item.classList.remove('over');
-        });
     }
 })();
